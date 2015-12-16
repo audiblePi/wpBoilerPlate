@@ -36,3 +36,24 @@ function load_slider_images(){
 
 	<?php ob_end_flush();
 }
+
+function get_social_icons()
+{
+	global $up_options;
+	ob_start(); ?>
+	<ul>
+		<?php global $up_options; if ($up_options->facebook != ''): ?>
+	    	<li><a lass="facebook" target="_blank" href="<?php echo $up_options->facebook ?>"><i class="fa fa-facebook"></i></a></li>
+	    <?php endif; ?>
+	    <?php if ($up_options->twitter != ''): ?>
+	    	<li><a class="twitter" target="_blank" href="<?php echo $up_options->twitter ?>"><i class="fa fa-twitter"></i></a></li>
+	    <?php endif; ?>
+	    <?php if ($up_options->linkedin != ''): ?>
+	    	<li><a class="linkedin" target="_blank" href="<?php echo $up_options->linkedin ?>"><i class="fa fa-linkedin"></i></a></li>
+	    <?php endif; ?>
+	    <?php if ($up_options->googleplus != ''): ?>
+	    	<li><a class="googleplus" target="_blank" href="<?php echo $up_options->googleplus ?>"><i class="fa fa-google-plus"></i></a></li>
+	    <?php endif; ?>
+   	</ul>
+<?php ob_end_flush();
+}

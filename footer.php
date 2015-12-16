@@ -1,29 +1,23 @@
-<div class="footer">
-	<footer class="container" id="footer" role="contentinfo">
-
+<footer role="contentinfo">
+ 	<div class="container">
 		<div class="row">
-			<div class="four columns">
-
+			<div class="col-md-4">
+				<?php dynamic_sidebar('Footer Widget Left'); ?>
 			</div>
-
-			<div class="four columns testimonials">
-
-
-
+			<div class="col-md-4">
+	      		<?php dynamic_sidebar('Footer Widget Center'); ?>
 			</div>
-
-			<div class="four columns">
+			<div class="col-md-4">
 				<?php dynamic_sidebar('Footer Widget Right'); ?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="twelve columns">
-				<p>&copy; Copyright <?php echo date('Y'); ?></p>
+			<div class="col-xs-12">
+				<p>&copy; Copyright <?php echo date('Y'); ?><a href=""> Website Design & Development</a> by Pippin Design</p>
 			</div>
 		</div>
-
-	</footer>
-</div>
+	</div>
+</footer>
 
 <?php wp_footer(); ?>
 
